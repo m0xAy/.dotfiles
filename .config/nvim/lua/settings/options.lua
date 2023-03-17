@@ -1,6 +1,6 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.updatetime = 300
+vim.opt.updatetime = 100
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.signcolumn = "yes"
@@ -18,7 +18,7 @@ vim.opt.swapfile = false
 vim.opt.background = "dark"
 vim.opt.scrolloff = 5
 vim.opt.wrap = false
-vim.opt.timeoutlen = 500
+vim.opt.timeoutlen = 500 -- relates to which-key delay
 vim.opt.title = true
 vim.opt.titlelen = 15
 vim.opt.breakindent = true

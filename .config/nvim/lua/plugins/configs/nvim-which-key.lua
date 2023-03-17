@@ -45,4 +45,7 @@ which_key.register({
   b = {
     name = "Buffers",
   },
+  m = {
+    name = "Markdown",
+  },
 }, { prefix = "<leader>" })

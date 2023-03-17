@@ -98,6 +98,13 @@ local plugins = {
   },
   "theHamsta/nvim-dap-virtual-text",
   "marilari88/twoslash-queries.nvim",
+  {
+    "iamcco/markdown-preview.nvim",
+    ft = "markdown",
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
 }
 
 lazy.setup(plugins, opts)
