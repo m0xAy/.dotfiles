@@ -1,0 +1,26 @@
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.updatetime = 300
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.signcolumn = "yes"
+vim.opt.termguicolors = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.expandtab = true
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevelstart = 99
+vim.opt.listchars = "tab:> ,trail:·,nbsp:+"
+vim.opt.list = true
+vim.opt.swapfile = false
+vim.opt.background = "dark"
+vim.opt.scrolloff = 5
+vim.opt.wrap = false
+vim.opt.timeoutlen = 500
+vim.opt.title = true
+vim.opt.titlelen = 15
+vim.opt.breakindent = true
+vim.opt.wildignore:append({ "*/node_modules" })
+vim.opt.cursorline = true
