@@ -2,6 +2,9 @@ local tree = require("nvim-tree")
 local lib = require("nvim-tree.lib")
 local view = require("nvim-tree.view")
 
+vim.g["loaded_netrw"] = 1
+vim.g["loaded_netrwPlugin"] = 1
+
 local function edit_or_open()
   local action = "close_node"
   local node = lib.get_node_at_cursor()
