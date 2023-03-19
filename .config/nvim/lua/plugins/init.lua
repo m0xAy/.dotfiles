@@ -106,6 +106,8 @@ local plugins = {
       vim.fn["mkdp#util#install"]()
     end,
   },
+  "RRethy/vim-illuminate",
+  "github/copilot.vim",
 }
 
 lazy.setup(plugins, opts)

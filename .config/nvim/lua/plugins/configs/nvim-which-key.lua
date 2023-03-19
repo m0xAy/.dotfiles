@@ -48,4 +48,7 @@ which_key.register({
   m = {
     name = "Markdown",
   },
+  c = {
+    name = "Copilot",
+  },
 }, { prefix = "<leader>" })

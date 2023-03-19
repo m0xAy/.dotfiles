@@ -99,3 +99,9 @@ map("n", "<leader>DB", dap.clear_breakpoints, { desc = "Clear breakpoints" })
 map("n", "<leader>mt", ":MarkdownPreviewToggle<CR>", { desc = "Toggle markdown preview" })
 map("n", "<leader>mp", ":MarkdownPreview<CR>", { desc = "Start markdown preview" })
 map("n", "<leader>ms", ":MarkdownPreviewStop<CR>", { desc = "Stop markdown preview" })
+
+-- Copilot
+map("n", "<leader>ce", ":Copilot enable<CR>", { desc = "Re-enable Copilot after disabling" })
+map("n", "<leader>cd", ":Copilot disable<CR>", { desc = "Globally disable Copilot" })
+map("n", "<leader>cs", ":Copilot status<CR>", { desc = "Check Copilot status" })
+map("n", "<leader>cp", ":Copilot panel<CR>", { desc = "Open window with completions" })
