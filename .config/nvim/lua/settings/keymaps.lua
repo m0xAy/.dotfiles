@@ -75,8 +75,8 @@ map("n", "<leader>S.", ":SessionManager! load_current_dir_session<CR>", { desc =
 map("n", "<F3>", vim.cmd.UndotreeToggle, { desc = "Toggle undo tree" })
 
 -- Buffers
-map("n", "<M-l>", ":BufferLineCycleNext<CR>", { desc = "Next buffer tab" })
-map("n", "<M-h>", ":BufferLineCyclePrev<CR>", { desc = "Previous buffer tab" })
+map("n", "<M-i>", ":BufferLineCycleNext<CR>", { desc = "Next buffer tab" })
+map("n", "<M-u>", ":BufferLineCyclePrev<CR>", { desc = "Previous buffer tab" })
 map("n", "<leader>bp", ":BufferLinePick<CR>", { desc = "Pick buffer" })
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", { desc = "Pick buffer to close" })
 map("n", "<leader>br", ":BufferLineCloseRight<CR>", { desc = "Close to the right" })
