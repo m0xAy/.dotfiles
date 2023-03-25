@@ -105,3 +105,5 @@ map("n", "<leader>ce", ":Copilot enable<CR>", { desc = "Re-enable Copilot after 
 map("n", "<leader>cd", ":Copilot disable<CR>", { desc = "Globally disable Copilot" })
 map("n", "<leader>cs", ":Copilot status<CR>", { desc = "Check Copilot status" })
 map("n", "<leader>cp", ":Copilot panel<CR>", { desc = "Open window with completions" })
+map("n", "<leader>cl", ":Copilot signout<CR>", { desc = "Sign out of Copilot" })
+map("n", "<leader>cu", ":Copilot setup<CR>", { desc = "Authenticate and enable Copilot" })
