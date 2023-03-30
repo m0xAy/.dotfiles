@@ -108,6 +108,7 @@ local plugins = {
   },
   "RRethy/vim-illuminate",
   "github/copilot.vim",
+  "christoomey/vim-tmux-navigator",
 }
 
 lazy.setup(plugins, opts)
