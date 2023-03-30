@@ -11,7 +11,7 @@ The alias `dot` is used to perform Git operations on this repo (this is defined 
 In your terminal run this [script](https://gist.github.com/m0xAy/ed64d1631c417cb476cb959050996638):
 
 ```sh
-sh -c "$(curl -fsSL https://gist.githubusercontent.com/m0xAy/ed64d1631c417cb476cb959050996638/raw/4b3c3e4b6f9c8d3ed1de0f3c7e0e54eb3b7a058c/setup.sh)"
+sh -c "$(curl -fsSL https://gist.githubusercontent.com/m0xAy/ed64d1631c417cb476cb959050996638/raw/8bf877cc92d40cb972d01261235cdf85168fadae/setup.sh)"
 ```
 
 Once complete, you should be able to close Terminal and open [Kitty](https://sw.kovidgoyal.net/kitty/)🤞.
