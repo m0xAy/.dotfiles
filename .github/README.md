@@ -18,4 +18,6 @@ It's fairly self-explanatory, you can see what will be installed by visiting the
 
 Once complete, you should be able to close Terminal and open [Kitty](https://sw.kovidgoyal.net/kitty/)🤞.
 
+When running `tmux` for the first time, you will need to install plugins by running `<C-a>`, `<S-i>`.
+
 
