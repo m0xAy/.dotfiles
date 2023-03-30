@@ -1,5 +1,7 @@
 # .dotfiles
 
+> ⚠️  Intended for private use only.
+
 This setup uses a 'bare' respository to track configuration files, rather than symlinks and scripts.
 
 It follows [this idea](https://news.ycombinator.com/item?id=11071754) shared by StreakyCobra (referenced in this [blog post](https://www.atlassian.com/git/tutorials/dotfiles)).
@@ -18,6 +20,5 @@ It's fairly self-explanatory, you can see what will be installed by visiting the
 
 Once complete, you should be able to close Terminal and open [Kitty](https://sw.kovidgoyal.net/kitty/)🤞.
 
-When running `tmux` for the first time, you will need to install plugins by running `<C-a>`, `<S-i>`.
-
+When running `tmux` for the first time, you will need to install plugins by running `Prefix` + `I`.
 
