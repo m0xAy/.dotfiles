@@ -21,6 +21,7 @@ end
 
 tree.setup({
   view = {
+    side = "right",
     width = 40,
     mappings = {
       custom_only = false,
