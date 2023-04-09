@@ -22,3 +22,9 @@ Once complete, you should be able to close Terminal and open [Kitty](https://sw.
 
 When running `tmux` for the first time, you will need to install plugins by running `Prefix` + `I`.
 
+#### MacOS Spaces
+
+Update these settings in *System Settings*:
+
+- *Desktop & Dock* -> *Mission Control* -> *Automatically rearrange Spaces based on most recent use* (disable)
+- *Accessibility* -> *Display* -> *Reduce motion* (enable)
