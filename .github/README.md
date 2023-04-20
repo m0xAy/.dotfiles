@@ -15,7 +15,7 @@ The alias `dot` is used to perform Git operations on this repo (this is defined 
 In Terminal run this [script](https://gist.github.com/m0xAy/ed64d1631c417cb476cb959050996638):
 
 ```sh
-sh -c "$(curl -fsSL https://gist.githubusercontent.com/m0xAy/ed64d1631c417cb476cb959050996638/raw/8bf877cc92d40cb972d01261235cdf85168fadae/setup.sh)"
+curl -fsSL https://gist.githubusercontent.com/m0xAy/ed64d1631c417cb476cb959050996638/raw/ | zsh
 ```
 
 It's fairly self-explanatory, you can see what will be installed by visiting the link above.
