@@ -1,22 +1,19 @@
 local tree = require("nvim-tree")
-local lib = require("nvim-tree.lib")
-local view = require("nvim-tree.view")
 
 vim.g["loaded_netrw"] = 1
 vim.g["loaded_netrwPlugin"] = 1
 
-local function edit_or_open()
-  local action = "close_node"
-  local node = lib.get_node_at_cursor()
-  if node.link_to and not node.nodes then
-    require("nvim-tree.actions.node.open-file").fn(action, node.link_to)
-    view.close() -- Close the tree if file was opened
-  elseif node.nodes ~= nil then
-    lib.expand_or_collapse(node)
-  else
-    require("nvim-tree.actions.node.open-file").fn(action, node.absolute_path)
-    view.close() -- Close the tree if file was opened
+local function on_attach(bufnr)
+  local api = require("nvim-tree.api")
+
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
+
+  api.config.mappings.default_on_attach(bufnr)
+
+  vim.keymap.set("n", "l", api.node.open.edit, opts("Edit or Open"))
+  vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close"))
 end
 
 tree.setup({
@@ -28,10 +25,7 @@ tree.setup({
     width = 40,
     mappings = {
       custom_only = false,
-      list = {
-        { key = "l", action = "edit",      action_cb = edit_or_open },
-        { key = "h", action = "close_node" },
-      },
     },
   },
+  on_attach = on_attach,
 })
