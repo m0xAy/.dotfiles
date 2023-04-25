@@ -109,6 +109,10 @@ local plugins = {
   "RRethy/vim-illuminate",
   "github/copilot.vim",
   "christoomey/vim-tmux-navigator",
+  {
+    "giusgad/pets.nvim",
+    dependencies = { "MunifTanjim/nui.nvim", "giusgad/hologram.nvim" },
+  }
 }
 
 lazy.setup(plugins, opts)

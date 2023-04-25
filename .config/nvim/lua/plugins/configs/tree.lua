@@ -22,7 +22,7 @@ tree.setup({
   },
   view = {
     side = "right",
-    width = 40,
+    width = 45,
     mappings = {
       custom_only = false,
     },
