@@ -2,6 +2,8 @@
 
 > ⚠️  Intended for private use only.
 
+https://user-images.githubusercontent.com/126299768/234208139-0778ec7d-139f-4bd7-93ab-64f9e89b2d9d.mov
+
 This setup uses a 'bare' respository to track configuration files, rather than symlinks and scripts.
 
 It follows [this idea](https://news.ycombinator.com/item?id=11071754) shared by StreakyCobra (referenced in this [blog post](https://www.atlassian.com/git/tutorials/dotfiles)).
