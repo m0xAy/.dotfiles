@@ -26,6 +26,7 @@ tree.setup({
     mappings = {
       custom_only = false,
     },
+    relativenumber = true,
   },
   on_attach = on_attach,
 })
