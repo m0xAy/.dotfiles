@@ -107,7 +107,6 @@ local plugins = {
     end,
   },
   "RRethy/vim-illuminate",
-  "github/copilot.vim",
   "christoomey/vim-tmux-navigator",
   {
     "Equilibris/nx.nvim",
