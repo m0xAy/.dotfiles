@@ -17,8 +17,6 @@ brew "skhd"
 brew "tmux"
 brew "powerlevel10k"
 brew "zsh-autosuggestions"
-brew "fzf"
-brew "jq"
 
 cask "kitty"
 cask "visual-studio-code"
