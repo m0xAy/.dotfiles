@@ -1,6 +1,6 @@
 # .dotfiles
 
-> ⚠️  Intended for private use only.
+> ⚠️ Intended for private use only.
 
 https://user-images.githubusercontent.com/126299768/234208139-0778ec7d-139f-4bd7-93ab-64f9e89b2d9d.mov
 
@@ -24,15 +24,27 @@ It's fairly self-explanatory, you can see what will be installed by visiting the
 
 Once complete, you should be able to close Terminal and open [Kitty](https://sw.kovidgoyal.net/kitty/)🤞.
 
+### Running Tmux for the first time
+
 When running `tmux` for the first time, you will need to install plugins by running `Prefix` + `I`.
 
-#### MacOS Spaces
+### Running yabai and skhd for the first time
 
-Update these settings in *System Settings*:
+Start `yabai` by running `yabai --start-service`. This will install and start the service, while also setting it up to launch automatically on startup.
 
-- *Desktop & Dock* -> *Mission Control* -> *Automatically rearrange Spaces based on most recent use* (disable)
-![Disable space rearrange](./rearrange.png)
-- *Accessibility* -> *Display* -> *Reduce motion* (enable)
-![Enable reduce motion toggle](./reduce-motion.png)
-- *Keyboard* -> *Keyboard shortcuts* -> *Mission Control* (tick all - see image below)
-![All mission control shortcuts selected](./mission-control.png)
+You will also need to allow `yabai` and `skhd` to access your computer. You may be prompted to do this automatically when they start, or you can find the toggles this way:
+
+_System Settings_ -> _Privacy & Security_ -> _Accessibility_
+
+![Enable access](./access.png)
+
+### Configuring MacOS Spaces
+
+Update these settings in _System Settings_:
+
+- _Desktop & Dock_ -> _Mission Control_ -> _Automatically rearrange Spaces based on most recent use_ (disable)
+  ![Disable space rearrange](./rearrange.png)
+- _Accessibility_ -> _Display_ -> _Reduce motion_ (enable)
+  ![Enable reduce motion toggle](./reduce-motion.png)
+- _Keyboard_ -> _Keyboard shortcuts_ -> _Mission Control_ (tick all - see image below)
+  ![All mission control shortcuts selected](./mission-control.png)
