@@ -17,6 +17,7 @@ brew "skhd"
 brew "tmux"
 brew "powerlevel10k"
 brew "zsh-autosuggestions"
+brew "tree"
 
 cask "kitty"
 cask "visual-studio-code"
