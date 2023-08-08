@@ -21,7 +21,6 @@ tree.setup({
     enable = true,
   },
   view = {
-    side = "right",
     width = 45,
     mappings = {
       custom_only = false,
