@@ -22,9 +22,9 @@ tree.setup({
   },
   view = {
     width = 45,
-    mappings = {
-      custom_only = false,
-    },
+    -- mappings = {
+    --   custom_only = false,
+    -- },
     relativenumber = true,
   },
   on_attach = on_attach,

@@ -71,7 +71,7 @@ local plugins = {
     dependencies = { { "nvim-treesitter/nvim-treesitter" } },
   },
   "mattn/emmet-vim",
-  "lukas-reineke/indent-blankline.nvim",
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
   {
     "goolord/alpha-nvim",
     event = "VimEnter",
@@ -108,10 +108,10 @@ local plugins = {
   },
   "RRethy/vim-illuminate",
   "christoomey/vim-tmux-navigator",
-  {
-    "Equilibris/nx.nvim",
-    dependencies = { { "nvim-telescope/telescope.nvim" } },
-  },
+  -- {
+  --   "Equilibris/nx.nvim",
+  --   dependencies = { { "nvim-telescope/telescope.nvim" } },
+  -- },
 }
 
 lazy.setup(plugins, opts)

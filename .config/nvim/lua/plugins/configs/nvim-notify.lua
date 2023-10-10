@@ -1,5 +1,7 @@
-local notify = require('notify')
+local notify = require("notify")
 
 vim.notify = notify
 
-notify.setup()
+notify.setup({
+  background_colour = "#1b1d2b",
+})
