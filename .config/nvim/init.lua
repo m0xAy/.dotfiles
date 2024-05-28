@@ -25,7 +25,8 @@ require("plugins.configs.nvim-colorizer")
 require("plugins.configs.dap-virtual-text")
 require("plugins.configs.nvim-dapui")
 require("plugins.configs.nvim-comment")
-require("plugins.configs.nvim-nx")
+require("plugins.configs.nvim-neodev")
+-- require("plugins.configs.nvim-nx")
 -- MUST be set up in this order --
 -- mason -> mason-lspconfig -> lspconfig
 require("plugins.configs.nvim-mason")

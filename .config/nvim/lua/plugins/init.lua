@@ -55,7 +55,7 @@ local plugins = {
   },
   {
     "akinsho/bufferline.nvim",
-    version = "3.x",
+    version = "4.x",
     dependencies = { { "nvim-tree/nvim-web-devicons" } },
   },
   {
@@ -64,6 +64,7 @@ local plugins = {
     event = "VimEnter",
   },
   "folke/which-key.nvim",
+  "folke/neodev.nvim",
   "jose-elias-alvarez/null-ls.nvim",
   "numToStr/Comment.nvim",
   {
@@ -95,7 +96,7 @@ local plugins = {
   "mfussenegger/nvim-dap",
   {
     "rcarriga/nvim-dap-ui",
-    dependencies = { { "mfussenegger/nvim-dap" } },
+    dependencies = { { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
   },
   "theHamsta/nvim-dap-virtual-text",
   "marilari88/twoslash-queries.nvim",
