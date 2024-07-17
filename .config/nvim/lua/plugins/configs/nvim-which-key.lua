@@ -1,7 +1,7 @@
 local which_key = require("which-key")
 
 which_key.setup({
-  window = {
+  win = {
     border = "rounded",
     padding = { 2, 2, 2, 2 },
   },
@@ -11,44 +11,18 @@ which_key.setup({
   },
 })
 
-which_key.register({
-  f = {
-    name = "File",
-  },
-  d = {
-    name = "Diagnostics",
-  },
-  p = {
-    name = "Packages",
-  },
-  l = {
-    name = "LSP",
-  },
-  u = {
-    name = "UI",
-  },
-  s = {
-    name = "Search",
-  },
-  D = {
-    name = "Debugger",
-  },
-  g = {
-    name = "Git",
-  },
-  S = {
-    name = "Session",
-  },
-  t = {
-    name = "Terminal",
-  },
-  b = {
-    name = "Buffers",
-  },
-  m = {
-    name = "Markdown",
-  },
-  c = {
-    name = "Copilot",
-  },
-}, { prefix = "<leader>" })
+which_key.add({
+  { "<leader>D", group = "Debugger" },
+  { "<leader>S", group = "Session" },
+  { "<leader>b", group = "Buffers" },
+  { "<leader>c", group = "Copilot" },
+  { "<leader>d", group = "Diagnostics" },
+  { "<leader>f", group = "File" },
+  { "<leader>g", group = "Git" },
+  { "<leader>l", group = "LSP" },
+  { "<leader>m", group = "Markdown" },
+  { "<leader>p", group = "Packages" },
+  { "<leader>s", group = "Search" },
+  { "<leader>t", group = "Terminal" },
+  { "<leader>u", group = "UI" },
+})
