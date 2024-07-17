@@ -25,6 +25,10 @@ local plugins = {
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
+  {
+    "neovim/nvim-lspconfig",
+    version = "*",
+  },
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/cmp-path",
@@ -65,6 +69,7 @@ local plugins = {
   },
   "folke/which-key.nvim",
   "folke/neodev.nvim",
+  { "echasnovski/mini.icons",              version = false },
   "jose-elias-alvarez/null-ls.nvim",
   "numToStr/Comment.nvim",
   {
@@ -109,10 +114,7 @@ local plugins = {
   },
   "RRethy/vim-illuminate",
   "christoomey/vim-tmux-navigator",
-  -- {
-  --   "Equilibris/nx.nvim",
-  --   dependencies = { { "nvim-telescope/telescope.nvim" } },
-  -- },
+  "github/copilot.vim",
 }
 
 lazy.setup(plugins, opts)

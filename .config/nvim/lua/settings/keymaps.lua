@@ -98,8 +98,8 @@ map("n", "<F6>", dap.pause, { desc = "Debugger: Pause" })
 map("n", "<F10>", dap.step_over, { desc = "Debugger: Step over" })
 map("n", "<F11>", dap.step_into, { desc = "Debugger: Step into" })
 map("n", "<F12>", dap.step_out, { desc = "Debugger: Step out" })
-map("n", "<leader>Db", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
-map("n", "<leader>DB", dap.clear_breakpoints, { desc = "Clear breakpoints" })
+map("n", "<leader>ob", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
+map("n", "<leader>oB", dap.clear_breakpoints, { desc = "Clear breakpoints" })
 
 -- Markdown
 map("n", "<leader>mt", ":MarkdownPreviewToggle<CR>", { desc = "Toggle markdown preview" })
