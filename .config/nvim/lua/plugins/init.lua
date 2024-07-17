@@ -68,6 +68,15 @@ local plugins = {
   },
   "folke/which-key.nvim",
   "folke/neodev.nvim",
+  {
+    "folke/trouble.nvim",
+    dependencies = { { "nvim-tree/nvim-web-devicons" } },
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
+  },
   { "echasnovski/mini.icons",              version = false },
   "jose-elias-alvarez/null-ls.nvim",
   "numToStr/Comment.nvim",
@@ -82,10 +91,6 @@ local plugins = {
     event = "VimEnter",
   },
   "rcarriga/nvim-notify",
-  {
-    "folke/trouble.nvim",
-    dependencies = { { "nvim-tree/nvim-web-devicons" } },
-  },
   {
     "Shatur/neovim-session-manager",
     dependencies = { { "nvim-lua/plenary.nvim" } },
