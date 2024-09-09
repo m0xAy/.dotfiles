@@ -26,7 +26,6 @@ local plugins = {
   "williamboman/mason-lspconfig.nvim",
   {
     "neovim/nvim-lspconfig",
-    version = "*",
   },
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
