@@ -22,5 +22,5 @@ vim.opt.timeoutlen = 500 -- relates to which-key delay
 vim.opt.title = true
 vim.opt.titlelen = 15
 vim.opt.breakindent = true
-vim.opt.wildignore:append({ "*/node_modules" })
+vim.opt.wildignore:append({ "*/node_modules", "*/.nx" })
 vim.opt.cursorline = true

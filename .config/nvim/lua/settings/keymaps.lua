@@ -17,12 +17,7 @@ map("n", "<leader>fe", ":NvimTreeToggle<CR>", { desc = "Toggle file tree" })
 map("n", "<leader>fo", ":NvimTreeFocus<CR>", { desc = "Focus file tree" })
 map("n", "<leader>fh", ":NvimTreeRefresh<CR>", { desc = "Refresh file tree" })
 map("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
-map(
-  "n",
-  "<leader>fa",
-  ":Telescope find_files hidden=true no_ignore=true follow=true<CR>",
-  { desc = "Find across all files" }
-)
+map("n", "<leader>fa", ":Telescope find_files hidden=true follow=true<CR>", { desc = "Find across all files" })
 map("n", "<leader>fw", ":Telescope live_grep<CR>", { desc = "Find words" })
 map("n", "<leader>fr", ":Telescope oldfiles<CR>", { desc = "Find recent" })
 map("n", "<leader>fm", ":Telescope marks<CR>", { desc = "Find marks" })
