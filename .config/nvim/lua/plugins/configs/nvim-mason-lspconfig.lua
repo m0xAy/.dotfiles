@@ -8,6 +8,7 @@ mason_lsp.setup({
     "html",
     "cssls",
     "eslint",
+    "tailwindcss",
   },
   automatic_installation = true,
 })
