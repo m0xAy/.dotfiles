@@ -90,24 +90,39 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 mason_lsp.setup_handlers({
   function(server_name)
+    if server_name == "lua_ls" then
+      lsp[server_name].setup({
+        on_attach = on_attach,
+        flags = lsp_flags,
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+          },
+        },
+      })
+      return
+    elseif server_name == "tailwindcss" then
+      lsp[server_name].setup({
+        on_attach = on_attach,
+        flags = lsp_flags,
+        capabilities = capabilities,
+        settings = {
+          tailwindCSS = {
+            experimental = {
+              classRegex = { { "([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]" } },
+            },
+          },
+        },
+      })
+      return
+    end
     lsp[server_name].setup({
       on_attach = on_attach,
       flags = lsp_flags,
       capabilities = capabilities,
-    })
-  end,
-  ["lua_ls"] = function()
-    lsp.lua_ls.setup({
-      on_attach = on_attach,
-      flags = lsp_flags,
-      capabilities = capabilities,
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { "vim" },
-          },
-        },
-      },
     })
   end,
 })
