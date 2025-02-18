@@ -101,19 +101,18 @@ local plugins = {
   "mbbill/undotree",
   "akinsho/toggleterm.nvim",
   "norcalli/nvim-colorizer.lua",
-  "mfussenegger/nvim-dap",
-  {
-    "rcarriga/nvim-dap-ui",
-    dependencies = { { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
-  },
-  "theHamsta/nvim-dap-virtual-text",
+  -- "mfussenegger/nvim-dap",
+  -- {
+  --   "rcarriga/nvim-dap-ui",
+  --   dependencies = { { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
+  -- },
+  -- "theHamsta/nvim-dap-virtual-text",
   "marilari88/twoslash-queries.nvim",
   {
     "iamcco/markdown-preview.nvim",
-    ft = "markdown",
-    build = function()
-      vim.fn["mkdp#util#install"]()
-    end,
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreivew", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = ":call mkdp#util#install()",
   },
   "RRethy/vim-illuminate",
   "christoomey/vim-tmux-navigator",
