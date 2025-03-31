@@ -77,7 +77,7 @@ local plugins = {
     dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
   },
   { "echasnovski/mini.icons",              version = false },
-  "jose-elias-alvarez/null-ls.nvim",
+  "nvimtools/none-ls.nvim",
   "numToStr/Comment.nvim",
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
