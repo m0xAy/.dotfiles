@@ -88,7 +88,7 @@ local lsp_flags = {
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-mason_lsp.setup_handlers({
+mason_lsp.setup({
   function(server_name)
     if server_name == "lua_ls" then
       lsp[server_name].setup({
