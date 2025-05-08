@@ -98,6 +98,11 @@ local plugins = {
     "nvim-tree/nvim-tree.lua",
     dependencies = { { "nvim-tree/nvim-web-devicons" } },
   },
+  {
+    "davidmh/mdx.nvim",
+    config = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
   "mbbill/undotree",
   "akinsho/toggleterm.nvim",
   "norcalli/nvim-colorizer.lua",
