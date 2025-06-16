@@ -111,8 +111,19 @@ mason_lsp.setup_handlers({
         capabilities = capabilities,
         settings = {
           tailwindCSS = {
+            classFunctions = {
+              "tv",
+              "twMerge",
+              "twJoin",
+              "clsx",
+              "cva",
+              "cn",
+            },
             experimental = {
-              classRegex = { { "([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]" } },
+              classRegex = {
+                -- https://github.com/paolotiu/tailwind-intellisense-regex-list
+                "(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lass[Nn]ames)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]",
+              },
             },
           },
         },
