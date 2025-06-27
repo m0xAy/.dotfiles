@@ -23,12 +23,11 @@ local opts = {
 
 local plugins = {
   {
-    "williamboman/mason.nvim",
-    branch = "v1.x",
+    "mason-org/mason.nvim",
   },
   {
-    "williamboman/mason-lspconfig.nvim",
-    branch = "v1.x",
+    "mason-org/mason-lspconfig.nvim",
+    dependencies = { "mason-org/mason.nvim", "neovim/nvim-lspconfig" },
   },
   "neovim/nvim-lspconfig",
   "hrsh7th/nvim-cmp",

@@ -1,6 +1,3 @@
-local lsp = require("lspconfig")
-local mason_lsp = require("mason-lspconfig")
-
 local signs = {
   { name = "DiagnosticSignError", text = "󰅙" },
   { name = "DiagnosticSignWarn", text = "󰀦" },
@@ -88,52 +85,85 @@ local lsp_flags = {
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-mason_lsp.setup_handlers({
-  function(server_name)
-    if server_name == "lua_ls" then
-      lsp[server_name].setup({
-        on_attach = on_attach,
-        flags = lsp_flags,
-        capabilities = capabilities,
-        settings = {
-          Lua = {
-            diagnostics = {
-              globals = { "vim" },
-            },
-          },
+vim.lsp.config["lua_ls"] = {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+    },
+  },
+}
+
+vim.lsp.config["tailwindcss"] = {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
+  root_markers = { ".git" },
+  settings = {
+    tailwindCSS = {
+      classFunctions = {
+        "tv",
+        "twMerge",
+        "twJoin",
+        "clsx",
+        "cva",
+        "cn",
+      },
+      experimental = {
+        classRegex = {
+          -- https://github.com/paolotiu/tailwind-intellisense-regex-list
+          "(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lass[Nn]ames)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]",
         },
-      })
-      return
-    elseif server_name == "tailwindcss" then
-      lsp[server_name].setup({
-        on_attach = on_attach,
-        flags = lsp_flags,
-        capabilities = capabilities,
-        settings = {
-          tailwindCSS = {
-            classFunctions = {
-              "tv",
-              "twMerge",
-              "twJoin",
-              "clsx",
-              "cva",
-              "cn",
-            },
-            experimental = {
-              classRegex = {
-                -- https://github.com/paolotiu/tailwind-intellisense-regex-list
-                "(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lass[Nn]ames)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]",
-              },
-            },
-          },
-        },
-      })
-      return
-    end
-    lsp[server_name].setup({
-      on_attach = on_attach,
-      flags = lsp_flags,
-      capabilities = capabilities,
-    })
-  end,
-})
+      },
+    },
+  },
+}
+
+vim.lsp.config["ts_ls"] = {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
+}
+
+vim.lsp.config["cssls"] = {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
+}
+
+-- mason_lsp.setup_handlers({
+--   function(server_name)
+--     if server_name == "lua_ls" then
+--       lsp[server_name].setup({
+--         on_attach = on_attach,
+--         flags = lsp_flags,
+--         capabilities = capabilities,
+--         settings = {
+--           Lua = {
+--             diagnostics = {
+--               globals = { "vim" },
+--             },
+--           },
+--         },
+--       })
+--       return
+--     elseif server_name == "tailwindcss" then
+--       lsp[server_name].setup({
+
+--       })
+--       return
+--     end
+--     lsp[server_name].setup({
+--       on_attach = on_attach,
+--       flags = lsp_flags,
+--       capabilities = capabilities,
+--     })
+--   end,
+-- })
+
+require("lspconfig")
+require("mason-lspconfig")
