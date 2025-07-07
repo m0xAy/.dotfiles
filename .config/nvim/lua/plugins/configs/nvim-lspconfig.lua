@@ -102,7 +102,7 @@ vim.lsp.config["tailwindcss"] = {
   on_attach = on_attach,
   flags = lsp_flags,
   capabilities = capabilities,
-  root_markers = { ".git" },
+  root_markers = { ".git", "package.json" },
   settings = {
     tailwindCSS = {
       classFunctions = {
@@ -130,6 +130,12 @@ vim.lsp.config["ts_ls"] = {
 }
 
 vim.lsp.config["cssls"] = {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
+}
+
+vim.lsp.config["null-ls"] = {
   on_attach = on_attach,
   flags = lsp_flags,
   capabilities = capabilities,
