@@ -102,7 +102,7 @@ vim.lsp.config["tailwindcss"] = {
   on_attach = on_attach,
   flags = lsp_flags,
   capabilities = capabilities,
-  root_markers = { ".git", "package.json" },
+  root_markers = { ".git" },
   settings = {
     tailwindCSS = {
       classFunctions = {
@@ -117,6 +117,7 @@ vim.lsp.config["tailwindcss"] = {
         classRegex = {
           -- https://github.com/paolotiu/tailwind-intellisense-regex-list
           "(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lass[Nn]ames)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]",
+          { "classList.(?:add|remove|toggle)\\(([^)]*)\\)", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)" }
         },
       },
     },
