@@ -36,7 +36,7 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 local on_attach = function(client, bufnr)
   local map = vim.keymap.set
 
-  if client.name == "tsserver" then
+  if client.name == "ts_ls" then
     client.server_capabilities.document_formatting = false
     require("twoslash-queries").attach(client, bufnr)
   end
@@ -117,7 +117,7 @@ vim.lsp.config["tailwindcss"] = {
         classRegex = {
           -- https://github.com/paolotiu/tailwind-intellisense-regex-list
           "(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lass[Nn]ames)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]",
-          { "classList.(?:add|remove|toggle)\\(([^)]*)\\)", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)" }
+          { "classList.(?:add|remove|toggle)\\(([^)]*)\\)", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)" },
         },
       },
     },
