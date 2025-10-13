@@ -33,12 +33,34 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
   border = "rounded",
 })
 
+local lsp_formatting = function(bufnr)
+  vim.lsp.buf.format({
+    filter = function(client)
+      return client.name == "null-ls"
+    end,
+    bufnr = bufnr,
+  })
+end
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 local on_attach = function(client, bufnr)
   local map = vim.keymap.set
 
   if client.name == "ts_ls" then
     client.server_capabilities.document_formatting = false
     require("twoslash-queries").attach(client, bufnr)
+  end
+
+  if client.supports_method("textDocument/formatting") then
+    vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = augroup,
+      buffer = bufnr,
+      callback = function()
+        lsp_formatting(bufnr)
+      end,
+    })
   end
 
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -75,7 +97,7 @@ local on_attach = function(client, bufnr)
     { desc = "Code actions", noremap = true, silent = true, buffer = bufnr }
   )
   map("n", "<leader>lf", function()
-    vim.lsp.buf.format({ async = true })
+    lsp_formatting(bufnr)
   end, { desc = "Format", noremap = true, silent = true, buffer = bufnr })
 end
 
