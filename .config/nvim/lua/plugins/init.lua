@@ -57,6 +57,7 @@ local plugins = {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
+		branch = "main",
 	},
 	{
 		"akinsho/bufferline.nvim",
