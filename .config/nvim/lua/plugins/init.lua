@@ -41,7 +41,7 @@ local plugins = {
 	"lewis6991/gitsigns.nvim",
 	{
 		"nvim-telescope/telescope.nvim",
-		branch = "0.1.x",
+		branch = "master",
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 	},
 	{
@@ -58,17 +58,38 @@ local plugins = {
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		branch = "main",
-    lazy = false,
-    init = function()
-      vim.api.nvim_create_autocmd('FileType', {
-        callback = function()
-          -- Enable treesitter highlighting and disable regex syntax
-          pcall(vim.treesitter.start)
-          -- Enable treesitter-based indentation
-          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-        end,
-      })
-    end,
+		lazy = false,
+		init = function()
+			local ensureInstalled = {
+				"lua",
+				"python",
+				"vim",
+				"typescript",
+				"javascript",
+				"tsx",
+				"jsx",
+				"css",
+				"yaml",
+				"json",
+				"html",
+			}
+			local alreadyInstalled = require("nvim-treesitter").get_installed()
+			local parsersToInstall = vim.iter(ensureInstalled)
+				:filter(function(parser)
+					return not vim.tbl_contains(alreadyInstalled, parser)
+				end)
+				:totable()
+			require("nvim-treesitter").install(parsersToInstall)
+
+			vim.api.nvim_create_autocmd("FileType", {
+				callback = function()
+					-- Enable treesitter highlighting and disable regex syntax
+					pcall(vim.treesitter.start)
+					-- Enable treesitter-based indentation
+					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				end,
+			})
+		end,
 	},
 	{
 		"akinsho/bufferline.nvim",
