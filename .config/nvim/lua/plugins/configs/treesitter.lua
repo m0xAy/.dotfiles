@@ -1,4 +1,4 @@
-local treesitter_configs = require("nvim-treesitter.configs")
+local treesitter_configs = require("nvim-treesitter")
 local ts_context_commentstring = require("ts_context_commentstring")
 
 treesitter_configs.setup({
