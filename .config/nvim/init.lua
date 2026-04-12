@@ -4,7 +4,6 @@ require("settings.options")
 
 require("plugins")
 require("plugins.configs.nvim-notify")
-require("plugins.configs.treesitter")
 require("plugins.configs.nvim-gitsigns")
 require("plugins.configs.nvim-session-manager")
 require("plugins.configs.nvim-alpha")
