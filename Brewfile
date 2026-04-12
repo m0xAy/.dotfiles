@@ -18,6 +18,7 @@ brew "tmux"
 brew "powerlevel10k"
 brew "zsh-autosuggestions"
 brew "tree"
+brew "tree-sitter-cli"
 
 cask "kitty"
 cask "visual-studio-code"
